@@ -1,0 +1,664 @@
+$black : #000;
+$white : #fff;
+$light-green : #14b789;
+$blue : #535da1;
+
+
+
+@media all and (max-width:1200px){
+    //common
+    #about ,#experience , #education , #skills , #projects ,#testimonial, #service , #certificate{
+        padding: 100px 100px 50px;
+    }
+
+    //header
+    header nav.navbar {
+        width: 920px;
+    }
+
+    //spotlight
+    #spotlight ul li div.right-spotlight {
+        width: 300px;
+    }
+    #spotlight ul li {
+        margin-right: 20px;
+    }
+    
+    //about
+    #about div.about-flex {
+        flex-wrap: wrap;
+        div.each-about {
+            width: 100%;
+        }
+    }
+    #about div.about-flex div.single-about-1 {
+        margin: 60px 0 0 0;
+        order: 2;
+    }
+    #about div.about-flex {
+        margin-top: 60px;
+    }
+
+    //experience
+    #experience section.all-experience {
+        padding: 0;
+    }
+
+    //service
+    #service section.all-service section.each-service div.service-heading h6 {
+        font-size: 30px;
+    }
+    #service section.all-service section.each-service div.service-heading {
+        padding: 0px 0px 10px;
+        margin: 0px 0 10px;
+    }
+    #service section.all-service section.each-service div.service-heading div.service-image {
+        width: 50px;
+    }
+
+    //certificate
+    #certificate section.all-certificates ul li.certificate-container div {
+        height: 400px;
+        width: 350px;
+    }
+}
+@media all and (max-width:980px){
+    //common
+    div.heading {
+        padding: 20px 30px;
+        h2 {
+            font-size: 40px;
+        }
+    }
+
+    //header
+    header nav.navbar {
+        padding: 30px;
+        width: 820px;
+    }
+
+    //spotlight
+    #spotlight ul li h1 {
+        font-size: 44px;
+    }
+    #spotlight ul li h3 {
+        font-size: 32px;
+    }
+
+    //experience
+    #education div.heading {
+        margin-bottom: 40px;
+    }
+
+    //skills
+    #skills section.all-skills ul {
+        width: 46%;
+        &:nth-child(3n){
+            margin-right: 15px;
+        }
+    }
+
+    //projects
+    #projects section.all-projects a {
+        width: 100%;
+        min-height: 280px;
+    }
+
+    //service
+    #service section.all-service section.each-service {
+        width: 100%;
+        padding: 20px;
+        margin: 0px 0px 20px;
+        border-radius: 6px;
+        min-height: 300px;
+    }
+
+    //certificate
+    #certificate section.all-certificates ul {
+        flex-wrap: wrap;
+        border: 3px solid $light-green;
+        padding: 30px;
+        border-radius: 10px;
+    }
+    #certificate section.all-certificates ul li {
+        margin-right: 0px;
+        width: 100%;
+    }
+    #certificate section.all-certificates ul li.certificate-container {
+        margin-right: 0;
+        order: 2;
+        display: none;
+    }
+    #certificate section.all-certificates ul li.certificate-info div p {
+        width: 100%;
+    }
+
+    //testimonial
+    #testimonial swiper-container.mySwiper {
+        margin: 0;
+    }
+    #testimonial swiper-container.mySwiper swiper-slide section.single-testimonial div.testimonial-image {
+        margin: 0px auto 30px;
+    }
+
+    //footer
+    footer #contact ul.tri-contact {
+        flex-wrap: wrap;
+        padding: 0 150px ;
+    }
+    footer #contact ul.tri-contact li {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+@media all and (max-width:860px){
+    header nav.navbar {
+        width: 720px;
+    }
+
+    //spotlight 
+    #spotlight ul li h1 span {
+        font-size: 58px;
+    }
+    #spotlight ul li div.right-spotlight {
+        width: 250px;
+    }
+    #spotlight ul li div.right-spotlight img {
+        border-radius: 50%;
+        padding: 6px;
+        border-width: 6px ;
+    }
+
+    //#education
+    #education div.all-education ul li h4 {
+        font-size: 28px;
+    }
+    #education div.all-education ul li h6 {
+        font-size: 24px;
+    }
+    #education div.all-education ul li p.duration {
+        font-size: 16px;
+    }
+    #education div.all-education ul li div.each-education {
+        width: 70px;
+    }
+    #education div.all-education ul {
+        margin: 0;
+    }    
+}
+
+@media all and (max-width:768px){
+    //common
+    div.heading div.head-avatar {
+        width: 60px;
+    }
+    div.all-buttons button.each-nav-item {
+        border-radius: 4px;
+        font-size: 20px;
+        min-width: 160px;
+    }
+    
+    //header
+    header.header {
+        //header:100%;
+    }
+    ul.nav-menu {
+        position: fixed;
+        z-index: 9;
+        left: -100%;
+        top: 6rem;
+        flex-direction: column;
+        background-color: $light-green;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 0 100px;
+        border-radius:40px 40px 50px 50px;
+    }
+    header ul.nav-menu.activated_menu {
+        left: 0;
+    }
+    .nav-item {
+        margin: 30px 0;
+    }
+    header nav.navbar ul.nav-menu li.nav-item {
+        margin-right: 0;
+    }
+    html body  header nav.navbar div.hamburger {
+        display: block;
+        cursor: pointer;
+    }
+	.hamburger.activated_menu .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.activated_menu .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.activated_menu .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    ul.nav-menu {
+        li.nav-item {
+            margin-right: 0;
+            a {
+                font-size: 16px;
+                font-weight: 900;
+            }
+        }
+    }
+    header nav.navbar {
+        padding: 20px 30px;
+        width: 560px;
+    }
+
+    //spotlight 
+    #spotlight ul {
+        text-align: center;
+        flex-wrap: wrap;
+        margin: 150px 0 0;
+
+        li {
+            width: 100%;
+            order: 2;
+            margin-right: 0;
+
+            &:last-child {
+                order: 1;
+            }
+        }
+    }
+    #spotlight ul li div.right-spotlight {
+        margin: 0 auto;
+    }
+    #spotlight ul li div.important-logo-container {
+        display: inline-flex;
+        margin: 0 auto;
+    }
+
+    //about
+    #about div.about-flex div.single-about-2 div.about-user-image {
+        width: 280px;
+    }
+    #about div.about-flex div.single-about-2 div.about-user-image img {
+        box-shadow: 30px 30px #14b789;
+    }
+
+    //experience 
+    #experience section.all-experience ul {
+        flex-wrap:wrap;
+        margin: 10px 0 30px;
+    }
+    #experience section.all-experience ul li.company-name {
+        width: 100%;
+    }
+    #experience section.all-experience ul li.experience-detail {
+        width: 100%;
+
+        div.experience-paragraph {
+            margin-bottom: 20px;
+        }
+    }
+
+    //education
+    #education div.all-education ul {
+        flex-wrap: wrap;
+    }
+
+    //skills
+    #skills section.all-skills ul {
+        min-width: 200px;
+    }
+
+    //testimonial
+    #testimonial swiper-container.mySwiper swiper-slide section.single-testimonial p.testimonial-content {
+        font-size: 18px;
+    }
+
+    //footer
+    footer #contact ul.tri-contact {
+        padding: 0 80px;
+    }
+}  
+
+@media all and (max-width:640px){
+    //common
+    div.all-buttons button.each-nav-item {
+        font-size: 18px;
+        min-width: 120px;
+        padding: 15px 10px;
+    }
+    #about ,#experience , #education , #skills ,#testimonial, #projects , #service , #certificate {
+        padding: 100px 50px 50px;
+    }
+    
+    //header
+    header nav.navbar {
+        width: 420px;
+    }
+
+    //spotlight
+    #spotlight ul {
+        margin: 120px 0 0;
+    }
+    #spotlight ul li div.right-spotlight {
+        width: 220px;
+    }
+    #spotlight ul li h1 {
+        font-size: 38px;
+    }
+    #spotlight ul li h1 span {
+        font-size: 52px;
+    }
+    #spotlight ul li h3 {
+        font-size: 28px;
+    }
+
+    //skills
+    #skills section.all-skills {
+        display: block;
+        margin: 50px auto 0;
+        padding: 0 80px;
+    }
+    #skills section.all-skills ul {
+        width: 100%;
+    }
+
+    //service
+    #service section.all-service section.each-service div.service-heading h6 {
+        font-size: 24px;
+    }
+    #service section.all-service section.each-service div.service-heading div.service-image {
+        width: 40px;
+    }
+    #service section.all-service section.each-service a {
+        padding: 6px 20px;
+        border-radius: 6px;
+    }
+
+    //certificate
+    #certificate section.all-certificates ul li.certificate-info div h4 {
+        font-size: 24px;
+    }
+
+    //testimonial
+    #testimonial swiper-container.mySwiper swiper-slide section.single-testimonial p.testimonial-content {
+        font-size: 16px;
+    }
+    #testimonial swiper-container.mySwiper swiper-slide section.single-testimonial div.testimonial-image {
+        width: 100px;
+    }
+    #testimonial swiper-container.mySwiper swiper-slide section.single-testimonial h6 {
+        font-size: 20px;
+    }
+    #testimonial swiper-container.mySwiper swiper-slide section.single-testimonial p.about-him {
+        font-size: 18px;
+    }
+
+    //footer
+    footer {
+        padding: 50px;
+    }
+    footer #contact ul.tri-contact {
+        padding: 0 50px;
+    }
+
+}
+
+@media all and (max-width:480px){
+    //common
+    div.heading h2 {
+        font-size: 28px;
+    }
+    div.heading div.head-avatar {
+        width: 50px;
+    }
+    div.all-buttons {
+        flex-wrap: wrap;
+        padding: 0 60px;
+    }
+    div.all-buttons button.each-nav-item {
+        width: 100%;
+        margin: 0 0 10px;
+        margin-right: 0;
+    }
+    #about ,#experience , #education ,#certificate, #skills ,#testimonial, #projects , #service {
+        padding: 50px 30px 50px;
+    }
+
+    //header
+    header nav.navbar div.logo-bar a div.main-logo {
+        width: 60px;
+    }
+    header nav.navbar div.hamburger span.bar {
+        width: 18px;
+        height: 2px;
+    }
+    header nav.navbar {
+        width: 320px;
+    }
+    ul.nav-menu {
+        top: 5rem;
+    }
+    .hamburger.activated_menu .bar:nth-child(1) {
+        -webkit-transform: translateY(6px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
+    }
+    //spotlight
+    #spotlight ul li div.right-spotlight {
+        width: 200px;
+    }
+    #spotlight ul {
+        margin: 100px 0 0;
+    }
+    #spotlight ul li h1 {
+        font-size: 32px;
+    }
+    #spotlight ul li h1 span {
+        font-size: 44px;
+    }
+    #spotlight ul li h3 {
+        margin: 10px 0 30px;
+        font-size: 24px;
+    }
+    #spotlight ul li div.spotlight-buttons a {
+        padding: 10px 20px;
+    }
+
+    //about
+    #about div.about-flex div.single-about-1 p {
+        font-size: 14px;
+    }
+    #about div.about-flex div.single-about-1 ul li span {
+        font-size: 16px;
+    }
+    #about div.about-flex div.single-about-1 ul li {
+        width:100%;
+        margin: 10px 0px 0 0;
+    }
+    #about div.about-flex div.single-about-2 div.about-user-image {
+        width: 250px;
+    }
+    #about div.about-flex div.single-about-2 div.about-user-image img {
+        box-shadow: 20px 20px #14b789;
+    }
+
+    //experience
+    #experience section.all-experience ul li.experience-detail h6 {
+        font-size: 20px;
+    }
+    #experience section.all-experience ul li.experience-detail div.experience-paragraph p {
+        font-size: 15px;
+        margin: 10px 0 10px 10px;
+    }
+
+    //education
+    #education div.all-education ul {
+        padding: 15px 0;
+    }
+    #education div.all-education ul li h4 {
+        font-size: 24px;
+    }
+    #education div.all-education ul li h6 {
+        font-size: 20px;
+    }
+    #education div.all-education ul li p.other-details {
+        margin: 0 0 10px 0px;
+    }
+
+    //skills
+    #skills section.all-skills {
+        padding: 0 20px;
+    }
+    #skills section.all-skills ul li p.skill-duration {
+        font-size: 15px;
+    }
+    #skills section.all-skills ul li h6 {
+        font-size: 18px;
+    }
+
+    //projects
+    #projects section.all-projects a ul li div.book-icon {
+        width: 30px;
+    }
+    #projects section.all-projects a ul li h4 {
+        font-size: 24px;
+    }
+    #projects section.all-projects a p.project-description {
+        font-size: 14px;
+    }
+    #projects section.all-projects a {
+        min-height: 350px;
+    }
+
+    //service
+    #service section.all-service section.each-service p.service-content {
+        font-size: 14px;
+    }
+    #service section.all-service section.each-service a {
+        font-size: 14px;
+    }
+
+    //certificate
+    #certificate section.all-certificates ul li.certificate-info div h4 {
+        font-size: 20px;
+    }
+    #certificate section.all-certificates ul {
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+    #certificate section.all-certificates ul li.certificate-info div p {
+        font-size: 14px;
+    }
+    #certificate section.all-certificates ul li.certificate-info div a.certificate-button {
+        font-size: 14px;
+    }
+
+    //testimonial
+    #testimonial swiper-container.mySwiper {
+        padding: 40px 0px 60px;
+    }
+
+    //footer
+    footer #contact ul.tri-contact li div.each-tri-contact p {
+        margin: 10px 0 0;
+        font-size: 16px;
+    }
+    footer #contact ul.tri-contact li {
+        padding:20px;
+    }
+    footer #contact section.all-other-logo div.for-centering-logo a div.other-logo {
+        width: 30px;
+    }
+    footer #contact ul.tri-contact {
+        padding: 0;
+    }
+}
+
+
+@media all and (max-width:360px){
+    //common
+    div.heading {
+        padding: 20px;
+    }
+    
+    //header
+    header nav.navbar {
+        width: 280px;
+        padding: 15px 20px;
+    }
+    //spotlight
+    #spotlight ul li div.right-spotlight {
+        width: 160px;
+    }
+    #spotlight ul li div.right-spotlight img {
+        padding: 5px;
+        border-width: 5px;
+    }
+    #spotlight ul li h1 {
+        font-size: 28px;
+    }
+    #spotlight ul li h1 span {
+        font-size: 40px;
+    }
+    #spotlight ul li h3 {
+        font-size: 22px;
+    }
+
+    //about
+    #about div.about-flex div.single-about-2 div.about-user-image {
+        width: 230px;
+    }
+
+    //experience
+    #experience section.all-experience ul li.experience-detail h6 {
+        margin: 0;
+    }
+
+    //education
+    #education div.all-education ul li div.each-education {
+        width: 50px;
+    }
+    #education div.all-education ul li h4 {
+        font-size: 22px;
+    }
+    #education div.all-education ul li h6 {
+        font-size: 18px;
+    }
+    #education div.all-education ul li p.duration {
+        font-size: 14px;
+    }
+    #education div.all-education ul li p.other-details {
+        font-size: 14px;
+    }
+
+    //projects
+    #projects section.all-projects a {
+        min-height: 350px;
+        padding: 20px 10px;
+    }
+    #projects section.all-projects a div.each-tech span {
+        font-size: 14px;
+    }
+
+    //service
+    #service section.all-service section.each-service {
+        padding: 20px 20px 10px;
+        margin: 0px 0px 20px;
+        min-height: 350px;
+    }
+
+    //testimonial
+    #testimonial swiper-container.mySwiper swiper-slide section.single-testimonial p.testimonial-content {
+        font-size: 14px;
+    }
+
+    //footer
+    footer #contact section.all-other-logo div.for-centering-logo {
+        display:flex;
+    }
+}
+
+
+@media all and (max-width:320px){}

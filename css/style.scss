@@ -1,0 +1,138 @@
+@import "all";
+@import "responsive";
+
+
+$font-family_dm_sans : 'DM Sans', sans-serif;
+$font-family_poppins : 'Poppins', sans-serif;
+
+$black : #000;
+$white : #fff;
+$light-green : #14b789;
+$blue : #535da1;
+
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+    font-family: $font-family_dm_sans ;
+	font-size: 16px;
+	font-weight: 600;
+	overflow-x: hidden;
+	min-width: 320px;
+}
+input,textarea,select{
+	font-family: $font-family_poppins;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+	font-weight: 400;
+    font-family: $font-family_poppins;
+	color: $white;
+}
+
+
+body img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+a {
+	cursor: pointer;
+    color: $white;
+    font-weight: 900;
+
+
+    &:hover {
+		transition: .5s;
+    }
+}
+
+div.bottom-us {
+	background: #fff;
+	padding: 10px 0;
+	text-align: center;
+	border-top: 1px solid #000;
+	p {
+		color: #000;
+		a {
+			// color: #f7941e;
+			color: red;
+			font-size: 14px;
+			font-weight: 900;
+		
+			&:hover {
+				transition: .3s;
+			}
+		}
+	}
+}
+
+a.for-whatsapp-image {
+	z-index: 9;
+}
+.img-container {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 60px;
+    height: auto;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.floating { 
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+@media all and (max-width:480px){
+	.img-container {
+		width: 40px;
+	}
+}
+
+@media all and (max-width:320px){
+	.img-container {
+		bottom: 20px;
+		right: 10px;
+	}
+}
