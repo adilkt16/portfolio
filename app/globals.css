@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .link-hover {
+    @apply transition-colors duration-200 hover:text-primary;
+  }
+
+  .section-heading {
+    @apply text-sm font-bold uppercase tracking-widest text-foreground mb-4;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:bg-background-light hover:shadow-lg;
+  }
+
+  /* Add styles for About and Experience sections */
+  .about-section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+
+  .experience-section {
+    margin: 40px 20px 20px; /* Increase top margin to push it further down */
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+
+  .experience-item {
+    margin-bottom: 15px;
+  }
+}
