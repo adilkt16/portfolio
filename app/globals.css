@@ -29,20 +29,4 @@
     @apply transition-all duration-300 hover:bg-background-light hover:shadow-lg;
   }
 
-  /* Add styles for About and Experience sections */
-  .about-section {
-    margin: 20px;
-    padding: 20px;
-    @apply border border-foreground-accent/30;
-  }
-
-  .experience-section {
-    margin: 40px 20px 20px; /* Increase top margin to push it further down */
-    padding: 20px;
-    @apply border border-foreground-accent/30;
-  }
-
-  .experience-item {
-    margin-bottom: 15px;
-  }
 }
