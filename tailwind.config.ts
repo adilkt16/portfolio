@@ -9,24 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Custom color scheme - different from original
+        // Dark black-and-blue palette with white reserved for highlights.
         background: {
-          DEFAULT: '#0f172a', // slate-900
-          light: '#1e293b',   // slate-800
+          DEFAULT: '#05080d',
+          light: '#0b1422',
         },
         foreground: {
-          DEFAULT: '#e2e8f0', // slate-200
-          muted: '#94a3b8',   // slate-400
-          accent: '#64748b',  // slate-500
+          DEFAULT: '#e7f3ff',
+          muted: '#9ab4cf',
+          accent: '#5f7a96',
         },
         primary: {
-          DEFAULT: '#38bdf8',  // sky-400
-          light: '#7dd3fc',    // sky-300
-          dark: '#0ea5e9',     // sky-500
+          DEFAULT: '#149bdd',
+          light: '#72c3eb',
+          dark: '#0f74aa',
         },
         accent: {
-          DEFAULT: '#a78bfa',  // violet-400
-          light: '#c4b5fd',    // violet-300
+          DEFAULT: '#1a3f63',
+          light: '#2b5d8a',
         },
       },
       fontFamily: {

@@ -21,7 +21,10 @@ export default function MouseGradient() {
     <div
       className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
       style={{
-        background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(56, 189, 248, 0.1), transparent 80%)`,
+        background: `
+          radial-gradient(220px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.17), rgba(255, 255, 255, 0.07) 35%, transparent 65%),
+          radial-gradient(680px at ${mousePosition.x}px ${mousePosition.y}px, rgba(20, 155, 221, 0.22), transparent 75%)
+        `,
       }}
     />
   );
