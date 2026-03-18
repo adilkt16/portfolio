@@ -1,41 +1,57 @@
 const projects = [
   {
-    image: '/placeholder-project.jpg',
     title: 'Epoclip',
     description:
       'A web utility platform which helps to clip certain parts of the videos alone and share them. Web + Chrome Extension',
     technologies: ['Typescript', 'Next.js', 'HTML & CSS'],
+    category: 'Web + Extension',
     link: 'https://epoclip.com',
-    stats: null,
+    stats: 'Used by creators to share short highlights quickly',
   },
   {
-    image: '/placeholder-project.jpg',
     title: 'Eventgrid.info',
     description:
       'Plan, publish, and track every college event in one app.',
     technologies: ['React Native', 'Firebase'],
+    category: 'Mobile App',
     link: 'https://eventgrid.info',
-    stats: null,
+    stats: 'Simplifies event discovery and updates for students',
   },
   {
-    image: '/placeholder-project.jpg',
     title: 'Instagram Tool for Export View',
     description:
       'Upload your Instagram data export to browse and download your media. Everything runs locally in your browser — your data never leaves your device.',
     technologies: ['Next.js', 'Tailwind CSS', 'Vibe Coding'],
+    category: 'Privacy Utility',
     link: 'https://epoclip.com/iaas',
-    stats: null,
+    stats: 'Processes exported data locally in-browser',
   },
   {
-    image: '/placeholder-project.jpg',
     title: 'AltRise - Alarm App',
     description:
       'AltRise Clock: The Alarm That Actually Wakes You Up.',
     technologies: ['Kotlin'],
+    category: 'Android App',
     link: 'https://play.google.com/store/apps/details?id=com.altrise.clockapp&pcampaignid=web_share',
-    stats: null,
+    stats: 'Built for reliability and morning consistency',
   },
 ];
+
+const visualThemes = [
+  'from-cyan-400/25 via-background-light to-background',
+  'from-emerald-400/25 via-background-light to-background',
+  'from-amber-400/25 via-background-light to-background',
+  'from-rose-400/25 via-background-light to-background',
+];
+
+function getProjectInitials(title: string) {
+  return title
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0]?.toUpperCase() ?? '')
+    .join('');
+}
 
 export default function Projects() {
   return (
@@ -96,8 +112,36 @@ export default function Projects() {
                   </ul>
                 </div>
                 <div className="z-10 sm:order-1 sm:col-span-2">
-                  <div className="rounded border-2 border-foreground-accent/10 bg-background-light overflow-hidden aspect-video flex items-center justify-center">
-                    <span className="text-foreground-accent text-sm">Image</span>
+                  <div
+                    className={`relative aspect-video overflow-hidden rounded-lg border border-foreground-accent/20 bg-gradient-to-br p-3 ${visualThemes[index % visualThemes.length]}`}
+                    aria-hidden="true"
+                  >
+                    <div className="absolute -right-5 -top-5 h-16 w-16 rounded-full bg-primary/20 blur-2xl" />
+                    <div className="absolute -left-6 bottom-0 h-14 w-14 rounded-full bg-foreground-accent/20 blur-2xl" />
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-foreground-muted">
+                      Project Snapshot
+                    </p>
+                    <div className="mt-3 flex items-end justify-between">
+                      <div>
+                        <p className="text-2xl font-bold leading-none text-foreground">
+                          {getProjectInitials(project.title)}
+                        </p>
+                        <p className="mt-1 text-[11px] text-foreground-muted">{project.category}</p>
+                      </div>
+                      <span className="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-primary">
+                        Live
+                      </span>
+                    </div>
+                    <div className="mt-3 grid grid-cols-2 gap-1.5 text-[10px] text-foreground-muted">
+                      {project.technologies.slice(0, 2).map((tech) => (
+                        <span
+                          key={tech}
+                          className="truncate rounded border border-foreground-accent/20 bg-background/60 px-2 py-1"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
