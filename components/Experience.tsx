@@ -1,4 +1,19 @@
-const experiences = [
+type ExperienceLink = {
+  text: string;
+  url: string;
+};
+
+type ExperienceItem = {
+  period: string;
+  title: string;
+  company: string;
+  companyUrl: string;
+  description: string;
+  technologies: string[];
+  links: ExperienceLink[];
+};
+
+const experiences: ExperienceItem[] = [
   {
     period: '2025 — Present',
     title: 'Co Founder',
