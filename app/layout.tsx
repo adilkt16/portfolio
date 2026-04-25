@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Portfolio | Generalist | ADIL K T',
-  description: 'Creating a Life/World, not defined by a single Career or Identity...',
+  description: 'Crafting a Life, not defined by a Single Identity or Career...',
 };
 
 export default function RootLayout({

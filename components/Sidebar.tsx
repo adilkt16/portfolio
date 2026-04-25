@@ -47,7 +47,7 @@ export default function Sidebar() {
           Generalist
         </h2>
         <p className="mt-4 max-w-xs leading-normal text-foreground-muted">
-          Creating a Life/World, not defined by a single Career or Identity...
+          Crafting a Life, not defined by a Single Identity or Career...
         </p>
 
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
