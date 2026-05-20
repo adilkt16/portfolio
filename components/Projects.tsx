@@ -1,5 +1,14 @@
 const projects = [
   {
+    title: 'CertGen',
+    description:
+      'Generate professional certificates in bulk from any uploaded template and spreadsheets, then export everything in one ZIP.',
+    technologies: ['Next.js', 'Tailwind CSS', 'CSV/XLSX'],
+    category: 'Web App',
+    link: 'https://certgen-pro.netlify.app',
+    stats: 'Built for fast certificate production at scale',
+  },
+  {
     title: 'Epoclip',
     description:
       'A web utility platform which helps to clip certain parts of the videos alone and share them. Web + Chrome Extension',
