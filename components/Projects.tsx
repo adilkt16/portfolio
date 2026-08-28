@@ -1,5 +1,14 @@
 const projects = [
   {
+    title: 'Choice-O-Meter',
+    description:
+      'A private, quiet archive of your branching paths. Map, reflect upon, and honor the life choices that defined your history.',
+    technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
+    category: 'Web App',
+    link: 'https://choice-o-meter.web.app/',
+    stats: 'Personal life-decision timeline & archive',
+  },
+  {
     title: 'CertGen',
     description:
       'Generate professional certificates in bulk from any uploaded template and spreadsheets, then export everything in one ZIP.',
